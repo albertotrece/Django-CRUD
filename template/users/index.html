@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+</head>
+<body>
+	<h1>CRUD desenvolvido utilizando Django</h1>
+	<a href="{% url user_create %}">Inserir Usuário</a>
+	<table border="1" rules="all" id="users">
+		<tr>
+			<td><b>ID</b></td>
+			<td><b>Nome</b></td>
+			<td><b>CPF</b></td>
+			<td><b>Telefone</b></td>
+			<td><b>Email</b></td>
+		</tr>
+
+		{% for user in userList %}
+
+		<tr>
+			<td>{{ user.userId }}</td>
+			<td>{{ user.nome }}</td>
+			<td>{{ user.cpf }}</td>
+			<td>{{ user.telefone }}</td>
+			<td>{{ user.email }}</td>
+			<td><a href="/users/update/{{ user.userId }}">Atualizar</a></td>
+			<td><a href="/users/delete/{{ user.userId }}/">Remover</a></td>
+		</tr>
+
+		{% endfor %}
+
+	</table>
+</body>
+</html>

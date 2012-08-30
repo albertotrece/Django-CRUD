@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Remover usuário</title>
+</head>
+<body>
+	<a href="javascript:history.go(-1)">Voltar</a>
+	<form method='post' action='.'>
+		{% csrf_token %}
+		<p>Confirma a exclusão do usuário?</p>
+		<input type="submit" />
+	</form>
+</body>
+</html>

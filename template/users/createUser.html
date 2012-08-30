@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Criar novo usuário</title>
+</head>
+<body>
+	<a href="javascript:history.go(-1)">Voltar</a>
+	<form action="." method="POST">
+		<table class="form">
+			{{ form }}{% csrf_token %}
+			<tr>
+				<th>&nbsp;</th>
+				<td><input type="submit" value="Inserir" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
